@@ -9,11 +9,14 @@ import { MyApp } from './app.component';
 import {FIREBASE_CONFIG} from './app.firebase.config';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireAuthModule} from 'angularfire2/auth'
+import { LoginPage } from '../pages/login/login';
+import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
     MyApp,
-    //HomePage
+    HomePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import {AngularFireAuthModule} from 'angularfire2/auth'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    //HomePage
+    HomePage,
+    LoginPage
   ],
   providers: [
     StatusBar,

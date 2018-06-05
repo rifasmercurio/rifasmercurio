@@ -1,7 +1,7 @@
 {
-  "name": "demoIonic",
+  "name": "rifas-mercurio",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Rifas Mercurio <rifasmercurio@gmail.com>",
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
@@ -38,5 +38,5 @@
     "@ionic/app-scripts": "3.1.9",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "Un proyecto familiar para la administración de rifas"
 }

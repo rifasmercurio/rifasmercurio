@@ -1,8 +1,8 @@
 export const FIREBASE_CONFIG  = {
-    apiKey: "AIzaSyBQKlJq2nrA9O8znVwNdZp1plB5Br1ZM8Q",
-    authDomain: "ionictodo-29287.firebaseapp.com",
-    databaseURL: "https://ionictodo-29287.firebaseio.com",
-    projectId: "ionictodo-29287",
-    storageBucket: "ionictodo-29287.appspot.com",
-    messagingSenderId: "920751423623"
+  apiKey: "AIzaSyA2ckJZ7lnlBBplDYR5WVbpBqFiqXWUt7Y",
+  authDomain: "rifas-mercurio.firebaseapp.com",
+  databaseURL: "https://rifas-mercurio.firebaseio.com",
+  projectId: "rifas-mercurio",
+  storageBucket: "rifas-mercurio.appspot.com",
+  messagingSenderId: "920784396544"
   };

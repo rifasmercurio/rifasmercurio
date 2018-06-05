@@ -1,30 +1,49 @@
-<!--
-  Generated template for the RegisterPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Register</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-    <ion-item>
-        <ion-label floating>Email</ion-label>
-        <ion-input type="text" [(ngModel)]=user.email></ion-input>
-    </ion-item>
+<!-- -->
+<ion-content class="auth-page">
+    <div class="login-content">
   
-    <ion-item>
-        <ion-label floating>Password</ion-label>
-        <ion-input type="password" [(ngModel)]=user.password></ion-input>
-    </ion-item>
+      <!-- Logo -->
+      <div padding text-center>
+        <div class="logo"></div>
+      </div>
   
-    <button ion-button color="light" (click)="register(user)">Register</button>
-
-</ion-content>
+      <!-- Login form -->
+      <form class="list-form">
+          <ion-item>
+              <ion-label floating>
+                <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+                Correo electrónico
+              </ion-label>
+              <ion-input type="email" [(ngModel)]=user.email [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+      
+            <ion-item>
+              <ion-label floating>
+                <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+                Clave
+              </ion-label>
+              <ion-input type="password" [(ngModel)]=user.password [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+          </form>
+  
+      <div margin-top>
+        <button ion-button block color="dark" tappable (click)="register(user)">
+          Registrarse
+        </button>
+  
+        <p text-center ion-text color="secondary">O registrate con:</p>
+  
+        <ion-grid>
+            <ion-row>
+              <ion-col align-self-center text-center>
+                <button ion-button icon-only class="btn-google">
+                  <ion-icon name="logo-google"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </div>
+  
+    </div>
+  </ion-content>
+  
