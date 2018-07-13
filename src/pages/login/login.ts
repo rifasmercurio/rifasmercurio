@@ -17,10 +17,11 @@ export class LoginPage {
   user: User
 
   constructor(private auth: AuthService,
-    public navCtrl: NavController) { }
+    public navCtrl: NavController) { 
+      this.auth.user.subscribe(user => this.user = user)
+    }
 
   async login(authData: AuthData) {
-    this.mapUser()
     const logged = this.auth.login(authData.email, authData.password)
     if (logged) {
       if (this.auth.isAdmin(this.user)) {
@@ -29,10 +30,6 @@ export class LoginPage {
         this.navCtrl.setRoot('VendorPage')
       }
     }
-  }
-
-  private mapUser() {
-    this.user = this.auth.user
   }
 
   register() {
