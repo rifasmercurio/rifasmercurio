@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AuthData } from '../../models/authData';
+import { AuthData } from '../../models/auth';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { AuthService } from './auth.service';
+import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
 import { AngularFirestore } from 'angularfire2/firestore';
 
@@ -25,7 +25,9 @@ export class LoginPage {
     const logged = this.auth.login(authData.email, authData.password)
     if (logged) {
       if (this.auth.isAdmin(this.user)) {
-        this.navCtrl.setRoot('AdminPage')
+        //this.navCtrl.setRoot('AdminPage')
+        this.navCtrl.setRoot('DrawPage')
+        
       } else if (this.auth.isVendor(this.user)) {
         this.navCtrl.setRoot('VendorPage')
       }

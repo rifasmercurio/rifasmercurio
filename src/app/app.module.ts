@@ -9,8 +9,10 @@ import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AuthService } from '../pages/login/auth.service';
+import { AuthService } from '../services/auth.service';
 import { Router, RouterModule } from '@angular/router';
+import { DrawService } from '../services/draw.service';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { Router, RouterModule } from '@angular/router';
     StatusBar,
     SplashScreen,
     AuthService,
+    DrawService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

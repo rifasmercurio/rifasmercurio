@@ -3,9 +3,9 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { switchMap } from 'rxjs/operators';
-import { User } from '../../models/user';
+import { User } from '../models/user';
 import 'rxjs/add/observable/of';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 
 @Injectable()
 export class AuthService {
