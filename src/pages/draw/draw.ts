@@ -29,11 +29,6 @@ export class DrawPage {
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DrawPage');
-  }
-
-
   goToDetail(){
     this.navCtrl.setRoot('DrawDetailPage');
   }

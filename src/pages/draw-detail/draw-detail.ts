@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Draw } from '../../models/draw';
+import { UploadDrawPage } from '../upload-draw/upload-draw';
 
 /**
  * Generated class for the DrawDetailPage page.
@@ -23,6 +24,9 @@ export class DrawDetailPage {
      kickoff: null,
      status: 'DISPONIBLE',
    };
+
+   //@ViewChild(UploadDrawPage) UploadDrawPage: UploadDrawPage;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

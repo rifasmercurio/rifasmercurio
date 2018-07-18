@@ -24,9 +24,8 @@ export class LoginPage {
   async login(authData: AuthData) {
     const logged = this.auth.login(authData.email, authData.password)
     if (logged) {
-      if (this.auth.isAdmin(this.user)) {
-        //this.navCtrl.setRoot('AdminPage')
-        this.navCtrl.setRoot('DrawPage')
+      if (this.auth.isAdmin(this.user)) {        
+        this.navCtrl.setRoot('MenuPage')
         
       } else if (this.auth.isVendor(this.user)) {
         this.navCtrl.setRoot('VendorPage')

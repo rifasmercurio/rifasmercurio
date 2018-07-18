@@ -12,11 +12,15 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from '../services/auth.service';
 import { Router, RouterModule } from '@angular/router';
 import { DrawService } from '../services/draw.service';
+import { UploadDrawPageModule } from '../pages/upload-draw/upload-draw.module';
+import { VendorPageModule } from '../pages/vendor/vendor.module';
+import { DrawDetailPageModule } from '../pages/draw-detail/draw-detail.module';
 
 
 @NgModule({
   declarations: [
     MyApp
+    
   ],
   imports: [
     BrowserModule,
