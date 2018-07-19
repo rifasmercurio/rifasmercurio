@@ -18,25 +18,31 @@ export class LoginPage {
   authData = {} as AuthData;
   user: User
 
-  constructor(private auth: AuthService,
+  constructor(public auth: AuthService,
     public navCtrl: NavController) { 
-      this.auth.user.subscribe(user => this.user = user)
+      this.auth.user.subscribe(user => {
+        this.user = user
+        if(this.user) {
+        this.navToUserPage()
+      }})
     }
 
   async login(authData: AuthData) {
-    const logged = this.auth.login(authData.email, authData.password)
-    if (logged) {
-      if (this.auth.isAdmin(this.user)) {        
-        this.navCtrl.setRoot(MenuPage)
-        
-      } else if (this.auth.isVendor(this.user)) {
-        this.navCtrl.setRoot(VendorPage)
-      }
-    }
+    this.auth.login(authData.email, authData.password)
+    this.navToUserPage()
   }
 
   register() {
     this.navCtrl.push(RegisterPage);
+  }
+
+  navToUserPage() {
+    if (this.auth.isAdmin(this.user)) {
+      this.navCtrl.setRoot(MenuPage)
+
+    } else if (this.auth.isVendor(this.user)) {
+      this.navCtrl.setRoot(VendorPage)
+    }
   }
 
 }

@@ -1,4 +1,7 @@
 <!-- -->
+<h1 *ngIf="auth.user | async">Welcome {{ (auth.user | async)?.email }}!</h1>
+
+<div *ngIf="!(auth.user | async)">
 <ion-content padding class="animated fadeIn login auth-page">
   <div class="login-content">
 
@@ -59,3 +62,4 @@
 
   </div>
 </ion-content>
+</div>

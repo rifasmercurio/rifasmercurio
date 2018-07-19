@@ -9,6 +9,7 @@ import * as firebase from 'firebase';
 
 @Injectable()
 export class AuthService {
+
   user: Observable<User>
  
   constructor(private afAuth: AngularFireAuth,
