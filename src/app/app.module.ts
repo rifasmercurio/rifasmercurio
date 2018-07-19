@@ -12,27 +12,53 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from '../services/auth.service';
 import { Router, RouterModule } from '@angular/router';
 import { DrawService } from '../services/draw.service';
-import { UploadDrawPageModule } from '../pages/upload-draw/upload-draw.module';
-import { VendorPageModule } from '../pages/vendor/vendor.module';
-import { DrawDetailPageModule } from '../pages/draw-detail/draw-detail.module';
+import { AdminPage } from '../pages/admin/admin';
+import { DrawDetailPage } from '../pages/draw/draw-detail/draw-detail';
+import { DrawPage } from '../pages/draw/draw-list/draw';
+import { UploadDrawPage } from '../pages/draw/upload-draw/upload-draw';
+import { LoginPage } from '../pages/login/login';
+import { MenuPage } from '../pages/menu/menu';
+import { RegisterPage } from '../pages/register/register';
+import { TabsPage } from '../pages/tabs/tabs';
+import { VendorPage } from '../pages/vendor/vendor';
+
+
 
 
 @NgModule({
   declarations: [
-    MyApp
-    
+    MyApp,
+    AdminPage,
+    UploadDrawPage,
+    DrawDetailPage,
+    DrawPage,
+    LoginPage,
+    MenuPage,
+    RegisterPage,
+    TabsPage,
+    VendorPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp,
+    AdminPage,
+    UploadDrawPage,
+    DrawDetailPage,
+    DrawPage,
+    LoginPage,
+    MenuPage,
+    RegisterPage,
+    TabsPage,
+    VendorPage
   ],
+
   providers: [
     StatusBar,
     SplashScreen,

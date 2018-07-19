@@ -1,5 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav, Icon } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
+import { DrawPage } from '../draw/draw-list/draw';
+import { VendorPage } from '../vendor/vendor';
 
 /**
  * Generated class for the MenuPage page.
@@ -17,21 +20,18 @@ import { IonicPage, NavController, NavParams, Nav, Icon } from 'ionic-angular';
     icon: string;
  }
 
-
-@IonicPage()
 @Component({
   selector: 'page-menu',
   templateUrl: 'menu.html',
 })
 export class MenuPage {
 
-  rootPage = 'TabsPage';
+  rootPage = TabsPage;
 
   @ViewChild(Nav) nav: Nav;
   pages: PageInterface[] =[
-    {title:'Sorteos', pageName: 'TabsPage', tabComponent: 'DrawPage', index: 0, icon:'home'},
-    {title:'Vendedores', pageName: 'TabsPage', tabComponent: 'VendorPage', index: 1, icon:'contacts'},
-    {title:'Carga', pageName: 'TabsPage', tabComponent: 'UploadDrawPage', index: 2, icon:'contacts'},
+    {title:'Sorteos', pageName: 'TabsPage', tabComponent: DrawPage, index: 0, icon:'home'},
+    {title:'Vendedores', pageName: 'TabsPage', tabComponent: VendorPage, index: 1, icon:'contacts'},
   ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

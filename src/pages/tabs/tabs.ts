@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { VendorPage } from '../vendor/vendor';
+import { DrawPage } from '../draw/draw-list/draw';
 
 /**
  * Generated class for the TabsPage page.
@@ -8,15 +10,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
 
-  drawPage = 'DrawPage';
-  vendorPage = 'VendorPage';
+  drawPage = DrawPage;
+  vendorPage = VendorPage;
   myIndex: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

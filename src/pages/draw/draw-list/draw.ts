@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, List } from 'ionic-angular';
-import { Draw } from '../../models/draw';
-import { DrawService } from '../../services/draw.service';
+
 import { DrawDetailPage } from '../draw-detail/draw-detail';
+import { Draw } from '../../../models/draw';
+import { DrawService } from '../../../services/draw.service';
 
 /**
  * Generated class for the DrawPage page.
@@ -11,7 +12,6 @@ import { DrawDetailPage } from '../draw-detail/draw-detail';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-draw',
   templateUrl: 'draw.html',
@@ -20,7 +20,9 @@ export class DrawPage {
 
   public draws: Draw[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private drawService: DrawService) {
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams, 
+     private drawService: DrawService) {
   }
 
   ngOnInit() {
@@ -30,7 +32,7 @@ export class DrawPage {
   }
 
   goToDetail(){
-    this.navCtrl.setRoot('DrawDetailPage');
+    this.navCtrl.setRoot(DrawDetailPage);
   }
 
 

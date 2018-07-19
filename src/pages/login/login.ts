@@ -5,8 +5,10 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { MenuPage } from '../menu/menu';
+import { VendorPage } from '../vendor/vendor';
+import { RegisterPage } from '../register/register';
 
-@IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
@@ -25,16 +27,16 @@ export class LoginPage {
     const logged = this.auth.login(authData.email, authData.password)
     if (logged) {
       if (this.auth.isAdmin(this.user)) {        
-        this.navCtrl.setRoot('MenuPage')
+        this.navCtrl.setRoot(MenuPage)
         
       } else if (this.auth.isVendor(this.user)) {
-        this.navCtrl.setRoot('VendorPage')
+        this.navCtrl.setRoot(VendorPage)
       }
     }
   }
 
   register() {
-    this.navCtrl.push('RegisterPage');
+    this.navCtrl.push(RegisterPage);
   }
 
 }
