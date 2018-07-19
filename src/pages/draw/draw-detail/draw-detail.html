@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalle de sorteo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list>
+
+        <ion-item>
+          <ion-label>Código</ion-label>
+          <ion-input type="text" [(ngModel)]="draw.code"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Descripción</ion-label>
+          <ion-textarea [(ngModel)]="draw.description"></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Fecha de juego</ion-label>
+            <ion-input type="text" [(ngModel)]="draw.date"></ion-input>
+          </ion-item>
+      
+      </ion-list>
+    
+    <page-upload-draw></page-upload-draw>
+
+</ion-content>

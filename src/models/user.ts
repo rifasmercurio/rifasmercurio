@@ -1,4 +1,6 @@
-export interface User {
+export class User {
+    uid: string;
     email: string;
-    password: string;
+    name: string;
+    roles = new Array();
 }

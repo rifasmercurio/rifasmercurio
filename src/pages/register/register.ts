@@ -1,30 +1,22 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { User } from '../../models/user';
+import { AuthData } from '../../models/auth';
 
-/**
- * Generated class for the RegisterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html',
 })
 export class RegisterPage {
 
-  user = {} as User;
+  authData = {} as AuthData;
 
   constructor( private angularFireAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  async register(user: User) {
+  async register(authData: AuthData) {
     try{
-      const result = await this.angularFireAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+      const result = await this.angularFireAuth.auth.createUserWithEmailAndPassword(authData.email, authData.password);
       console.log(result);
     }catch(e){
       console.error(e);
