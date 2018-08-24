@@ -23,9 +23,6 @@ export class DrawDetailPage {
      status: 'DISPONIBLE',
    };
 
-   //@ViewChild(UploadDrawPage) UploadDrawPage: UploadDrawPage;
-
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

@@ -21,6 +21,9 @@ import { MenuPage } from '../pages/menu/menu';
 import { RegisterPage } from '../pages/register/register';
 import { TabsPage } from '../pages/tabs/tabs';
 import { VendorPage } from '../pages/vendor/vendor';
+import { LoginPageModule } from '../pages/login/login.module';
+import { DrawPageModule } from '../pages/draw/draw.module';
+import { RegisterPageModule } from '../pages/register/register.module';
 
 
 
@@ -29,34 +32,38 @@ import { VendorPage } from '../pages/vendor/vendor';
   declarations: [
     MyApp,
     AdminPage,
-    UploadDrawPage,
-    DrawDetailPage,
-    DrawPage,
-    LoginPage,
+    //UploadDrawPage,
+    //DrawDetailPage,
+    //DrawPage,
+    //LoginPage,
     MenuPage,
-    RegisterPage,
+    VendorPage,
+    //RegisterPage,
     TabsPage,
-    VendorPage
+    
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp),    
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    LoginPageModule,
+    DrawPageModule,
+    RegisterPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     AdminPage,
-    UploadDrawPage,
-    DrawDetailPage,
-    DrawPage,
-    LoginPage,
-    MenuPage,
-    RegisterPage,
+    //UploadDrawPage,
+    //DrawDetailPage,
+    //DrawPage, 
     TabsPage,
-    VendorPage
+    //LoginPage,
+    MenuPage,
+    VendorPage,
+    //RegisterPage,
   ],
 
   providers: [

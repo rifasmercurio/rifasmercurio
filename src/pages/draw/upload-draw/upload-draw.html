@@ -1,8 +1,8 @@
 <section class="">
-    <input id="btn_agregar_archivo" href="#" style="display: none" type="file" accept=".xls,.xlsx" multiple="false">
+    <input id="btn_agregar_archivo" href="#" style="display: none"  [(ngModel)]="file" (change)="read($event)" type="file" accept=".xls,.xlsx" multiple="false">
   
     <a onclick="document.getElementById('btn_agregar_archivo').click()">
       <input type="button" href="#" class="cover-input">
-      <span class="cover-input" style="width:100%;">Cargar formato sorteos&nbsp;&nbsp;&nbsp;{{textoArchivo}}</span>
+      <span class="cover-input" style="width:100%;">Cargar formato sorteos&nbsp;&nbsp;&nbsp;{{fileDescription}}</span>
     </a>
   </section>
